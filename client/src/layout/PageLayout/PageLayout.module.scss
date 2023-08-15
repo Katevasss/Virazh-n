@@ -1,0 +1,342 @@
+@import 'src/styles/constants';
+
+.mainInfo {
+    color: aqua;
+    font-size: 6rem;
+
+    @media screen and (max-width: $tabletSizeLess) {
+        padding-top: 6rem;
+    }
+
+    @media screen and (max-width: $mobileSize) {
+        padding: 7rem 1rem 1rem;
+        padding-top: 8rem;
+    }
+}
+
+.icon_logo {
+    width: 5rem;
+    height: 5rem;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    background-color: var(--blueGray);
+    mask-image: url("../../img/icons/logo.svg");
+
+    &:hover {
+        font-family: MontserratExtraBold;
+        color: var(--orangeLight);
+        transition: 0.5s;
+
+        &::before {
+            opacity: 1;
+            left: 0;
+        }
+
+        &::after {
+            width: 100%;
+            opacity: 0.3;
+        }
+
+        .icon_logo {
+            background-color: var(--orangeLight);
+        }
+    }
+
+
+}
+
+.icon_login {
+    width: 2.5rem;
+    height: 3.3rem;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    background-color: var(--blueGray);
+    mask-image: url("../../img/icons/user_icon.svg");
+
+    &:hover {
+        font-family: MontserratExtraBold;
+        color: var(--orangeLight);
+        transition: 0.5s;
+
+        &::before {
+            opacity: 1;
+            left: 0;
+        }
+
+        &::after {
+            width: 100%;
+            opacity: 0.3;
+        }
+
+        .icon_logo {
+            background-color: var(--orangeLight);
+        }
+    }
+}
+
+
+.page {
+    padding: 2rem 8rem;
+    background-color: var(--dirtyWhite);
+    min-height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 40vw;
+        height: 50vh;
+        background-image: url("../../img/icons/lines_1.png");
+        background-size: contain;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+    }
+
+    &::before {
+        left: 0;
+        bottom: 0;
+    }
+
+    &::after {
+        right: 0;
+        top: 0;
+        background-image: url("../../img/icons/lines_2.png");
+        background-position: top right;
+        width: 40vw;
+        height: 70vh;
+    }
+
+
+    @media screen and (max-width: $tabletSizeLess) {
+        padding-top: 10rem;
+    }
+
+    @media screen and (max-width: $mobileSize) {
+        padding: 7rem 1rem 1rem;
+        padding-top: 10rem;
+    }
+
+}
+
+a {
+    font-weight: 600;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--blueGray);
+    background-color: var(--dirtyWhite);
+    z-index: 3;
+
+
+    @media screen and (max-width: $tabletSizeLess) {
+        z-index: 2;
+        grid-template-columns: 15rem 1fr;
+        background-color: var(--dirtyWhite);
+        box-shadow: 0px 1px 10px rgba(0, 55, 67, 0.5);
+        border-radius: 2px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+        min-height: 5rem;
+
+        &-white {
+            background-color: var(--orangeLight);
+        }
+    }
+
+    @media screen and (max-width: $mobileSize) {
+        padding: 1rem;
+        min-height: 5.6rem;
+    }
+
+}
+
+.content {
+    border-radius: 0.5rem;
+    border: 3px solid var(--blueGray);
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    z-index: 1;
+    flex-grow: 1;
+    background-color: var(--contentWhite);
+
+    @media screen and (max-width: $tabletSizeLess) {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.aside {
+    overflow: hidden;
+
+    @media screen and (max-width: $tabletSizeLess) {
+        position: fixed;
+        background-color: var(--dirtyWhite);
+        top: 4.5rem;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 4.5rem);
+        z-index: 3;
+
+    }
+
+    @media screen and (max-width: $mobileSize) {
+        top: 5.6rem;
+        height: calc(100vh - 5.6rem);
+    }
+
+}
+
+.asideContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    gap: 1rem;
+
+    @media screen and (max-width: $tabletSizeLess) {
+        position: relative;
+        padding: 1rem 0;
+        overflow: auto;
+        padding-top: 6rem;
+    }
+
+    @media screen and (max-width: $mobileSize) {
+        padding: 1rem 0 1rem;
+        padding-top: 3rem;
+    }
+}
+
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $tabletSizeLess) {
+        padding: 0 2rem;
+    }
+
+    @media screen and (max-width: $mobileSize) {
+        padding: 0 1rem;
+        flex-grow: 1;
+    }
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow: hidden;
+    flex-grow: 1;
+    justify-content: space-between;
+
+}
+
+.newsWidgetWrap {
+    overflow: hidden;
+    display: flex;
+
+}
+
+.mainPageLogo {
+    width: 2.7rem;
+    height: 2.7rem;
+}
+
+.logo {
+    margin-left: 0.5rem;
+    position: relative;
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+    // padding: 0 0.25rem 0.25rem; // Отступ для внутренних теней
+    height: 100%;
+    border-radius: 4px;
+
+    @media screen and (max-width: 1360px) {
+        // height: calc(100vh - 8rem);
+    }
+
+    @media screen and (max-width: 500px) {
+        height: calc(100vh - 7rem);
+    }
+}
+
+
+.mobileItems {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+}
+
+.headerLayout {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.5rem;
+    padding-right: 1rem;
+}
+
+.mobileLogo {
+    display: flex;
+    gap: 1rem;
+}
+
+.menuProfile {
+    margin-top: auto;
+    padding: 0 2rem;
+}
+
+.munuButton {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+
+}
+
+.logoName {
+    font-size: 2rem;
+    color: var(--blueGray);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.miniLogo {
+    font-size: 0.7rem;
+    font-weight: 600;
+}

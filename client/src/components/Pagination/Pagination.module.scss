@@ -1,0 +1,45 @@
+.search {
+    width: 100%;
+
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.textContainer {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bottomLine {
+    border-bottom: 1px solid black;
+}
+
+.number {
+    border-right: 0.2rem solid var(--blueGray);
+    padding-right: 0.5rem;
+}
+
+.quantity {
+    padding: 0.2rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.buttonsLayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.tr {
+    border-bottom: 0.1rem solid var(--blueGray);
+}

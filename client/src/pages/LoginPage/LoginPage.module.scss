@@ -1,0 +1,23 @@
+.formStyle {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--blueGray);
+    z-index: 3;
+    background-color: var(--dirtyWhite);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.label {
+    color: var(--blueGray);
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+}

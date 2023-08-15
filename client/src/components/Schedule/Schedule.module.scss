@@ -1,0 +1,27 @@
+.layout {
+    width: 20rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--blueGray);
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+    border-bottom: 1px solid var(--blueGray);
+    padding-left: 0.4rem;
+}
+
+.gap {
+    padding-top: 3rem;
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

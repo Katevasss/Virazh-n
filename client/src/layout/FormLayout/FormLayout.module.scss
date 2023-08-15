@@ -1,0 +1,116 @@
+@import 'src/styles/constants';
+
+.icon_logo {
+    width: 5rem;
+    height: 5rem;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    background-color: var(--blueGray);
+    mask-image: url("../../img/icons/logo.svg");
+
+    &:hover {
+        font-family: MontserratExtraBold;
+        color: var(--orangeLight);
+        transition: 0.5s;
+
+        &::before {
+            opacity: 1;
+            left: 0;
+        }
+
+        &::after {
+            width: 100%;
+            opacity: 0.3;
+        }
+
+        .icon_logo {
+            background-color: var(--orangeLight);
+        }
+    }
+
+
+}
+
+
+.layout {
+    padding: 2rem 0 5rem;
+    background-color: var(--dirtyWhite);
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    position: relative;
+
+    @media screen and (max-width: $tabletSizeLess) {
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 30vw;
+        height: 50vh;
+        background-image: url("../../img/icons/lines_1.png");
+        background-size: contain;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+    }
+
+    &::before {
+        left: 0;
+        bottom: 0;
+    }
+
+    &::after {
+        right: 0;
+        top: 0;
+        background-image: url("../../img/icons/lines_2.png");
+        background-position: top right;
+        width: 30vw;
+        height: 70vh;
+    }
+
+    &-light {
+        background-color: var(--orangeLight);
+    }
+}
+
+.title {
+    font-size: 2.4rem;
+    color: var(--blueGray);
+    text-transform: uppercase;
+    font-family: MontserratSemiBold;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    @media screen and (max-width: $xs) {
+        font-size: 2rem;
+
+        img {
+            max-width: 4rem;
+        }
+    }
+
+}
+
+.bottom {
+    position: absolute;
+    right: 8rem;
+    bottom: 2rem;
+
+    @media screen and (max-width: $tabletSizeLess) {
+        right: 1rem;
+        bottom: 1rem;
+    }
+}
+
+.logo {
+    width: 5rem;
+}
